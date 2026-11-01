@@ -113,18 +113,37 @@ for (var i = 0; i < pageButtons.length; i++) {
 }
 
 // Select Student or Organizer view. This is a demo role switch, not secure login.
-getElement("roleSelect").addEventListener("change", function () {
-  currentRole = this.value;
+function updateRoleView() {
+  var studentLinks = document.getElementsByClassName("student-only");
   var organizerLinks = document.getElementsByClassName("organizer-only");
+  var studentPages = document.getElementsByClassName("student-view");
 
-  for (var i = 0; i < organizerLinks.length; i++) {
-    organizerLinks[i].hidden = currentRole !== "organizer";
+  for (var i = 0; i < studentLinks.length; i++) {
+    studentLinks[i].hidden = currentRole === "organizer";
   }
 
-  if (currentRole === "student" && getElement("organizer").classList.contains("active")) {
+  for (var j = 0; j < organizerLinks.length; j++) {
+    organizerLinks[j].hidden = currentRole !== "organizer";
+  }
+
+  for (var k = 0; k < studentPages.length; k++) {
+    studentPages[k].hidden = currentRole === "organizer";
+  }
+
+  if (currentRole === "organizer") {
+    showPage("organizer");
+  } else {
     showPage("dashboard");
   }
+}
+
+getElement("roleSelect").addEventListener("change", function () {
+  currentRole = this.value;
+  updateRoleView();
 });
+
+// Set the correct pages and navigation when the website opens.
+updateRoleView();
 
 // Mobile menu button
 getElement("menuToggle").addEventListener("click", function () {
