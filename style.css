@@ -6,3 +6,5 @@
 @media(max-width:520px){.main-content{padding:0 13px 16px}.topbar{height:62px;margin-bottom:23px}.breadcrumb{font-size:10px}.welcome-row,.page-heading{align-items:flex-start;flex-direction:column}.welcome-row .primary-btn,.page-heading .primary-btn{width:100%}.stats-grid{gap:8px}.stat-card{padding:12px}.stat-card>strong{font-size:23px}.activities-grid{grid-template-columns:1fr}.filter-bar{flex-direction:column}.filter-bar select{width:100%;padding:12px}.two-fields{grid-template-columns:1fr}.panel{padding:15px}.demo-tag{align-self:flex-start}}
 /* Student and organizer role selector */
 .role-switch{display:flex;align-items:center;gap:7px;font-size:11px;color:#85899a;white-space:nowrap}.role-switch select{border:1px solid #ececf2;border-radius:7px;background:#fff;padding:8px;font:11px 'DM Sans';color:#424557}[hidden]{display:none!important}
+
+.profile-photo{object-fit:cover;display:block;}
