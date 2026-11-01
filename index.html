@@ -16,10 +16,10 @@
       </a>
       <div class="side-label">WORKSPACE</div>
       <nav class="side-nav" aria-label="Main navigation">
-        <button class="nav-link active" data-view="dashboard"><span>▦</span> Dashboard</button>
-        <button class="nav-link" data-view="activities"><span>◷</span> Activities</button>
-        <button class="nav-link" data-view="my-hours"><span>◉</span> My hours</button>
-        <button class="nav-link" data-view="submit"><span>＋</span> Submit hours</button>
+        <button class="nav-link active student-only" data-view="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-link student-only" data-view="activities"><span>◷</span> Activities</button>
+        <button class="nav-link student-only" data-view="my-hours"><span>◉</span> My hours</button>
+        <button class="nav-link student-only" data-view="submit"><span>＋</span> Submit hours</button>
         <button class="nav-link organizer-only" data-view="organizer" hidden><span>✓</span> Organizer panel</button>
       </nav>
       <div class="sidebar-bottom">
@@ -47,7 +47,7 @@
         </div>
       </header>
 
-      <section class="page-view active" id="dashboard">
+      <section class="page-view active student-view" id="dashboard">
         <div class="welcome-row">
           <div><p class="eyebrow">STUDENT OVERVIEW</p><h1>Good to see you, Student! <span>✦</span></h1>
             <p class="muted">Your time can make a real difference. Keep showing up.</p></div>
@@ -77,7 +77,7 @@
         </section>
       </section>
 
-      <section class="page-view" id="activities">
+      <section class="page-view student-view" id="activities">
         <div class="page-heading"><div><p class="eyebrow">GET INVOLVED</p><h1>Explore activities</h1><p class="muted">Discover opportunities to contribute to your campus community.</p></div></div>
         <div class="filter-bar"><label class="search-box">⌕ <input id="activitySearch" type="search" placeholder="Search activities..."></label>
           <select id="categoryFilter" aria-label="Filter by category"><option value="All">All categories</option><option>Environment</option><option>Community</option><option>Education</option><option>Events</option></select>
@@ -85,7 +85,7 @@
         <div class="activities-grid" id="activitiesGrid"></div>
       </section>
 
-      <section class="page-view" id="my-hours">
+      <section class="page-view student-view" id="my-hours">
         <div class="page-heading"><div><p class="eyebrow">YOUR CONTRIBUTION</p><h1>My volunteer hours</h1><p class="muted">A record of the hours you've submitted and their approval status.</p></div><button class="primary-btn" data-go="submit">＋ Submit hours</button></div>
         <div class="stats-grid compact-stats">
           <article class="stat-card"><div class="stat-top"><span>Verified</span><span class="stat-icon green">✓</span></div><strong id="historyVerified">0</strong><small>Approved hours</small></article>
@@ -97,7 +97,7 @@
         </section>
       </section>
 
-      <section class="page-view" id="submit">
+      <section class="page-view student-view" id="submit">
         <div class="page-heading"><div><p class="eyebrow">RECORD YOUR CONTRIBUTION</p><h1>Submit volunteer hours</h1><p class="muted">Tell us about the activity you completed. An organizer will review your entry.</p></div></div>
         <div class="form-layout">
           <section class="panel form-panel"><h2>Activity details</h2><p class="form-intro">Fields marked with * are required.</p>
