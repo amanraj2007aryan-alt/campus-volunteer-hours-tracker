@@ -56,7 +56,7 @@ function calculateHours(status) {
 }
 
 // 3. Change between website sections
-var currentRole = "student";
+var currentRole = getElement("roleSelect").value;
 
 function showPage(pageName) {
   if (pageName === "organizer" && currentRole !== "organizer") {
