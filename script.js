@@ -172,8 +172,7 @@ function showActivities() {
       var disabledText = "";
 
       if (joinedActivities.indexOf(activity.id) !== -1) {
-        buttonText = "✓ Registered";
-        disabledText = "disabled";
+        buttonText = "Unregister";
       }
 
       activityHTML += '<article class="activity-card">';
@@ -200,11 +199,16 @@ function showActivities() {
     registerButtons[j].addEventListener("click", function () {
       var activityId = Number(this.getAttribute("data-join"));
 
-      if (joinedActivities.indexOf(activityId) === -1) {
+      var joinedIndex = joinedActivities.indexOf(activityId);
+
+      if (joinedIndex === -1) {
         joinedActivities.push(activityId);
-        saveData();
-        showAllData();
+      } else {
+        joinedActivities.splice(joinedIndex, 1);
       }
+
+      saveData();
+      showAllData();
     });
   }
 }
