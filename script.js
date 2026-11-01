@@ -56,7 +56,14 @@ function calculateHours(status) {
 }
 
 // 3. Change between website sections
+var currentRole = "student";
+
 function showPage(pageName) {
+  if (pageName === "organizer" && currentRole !== "organizer") {
+    alert("Please switch to Organizer view first.");
+    return;
+  }
+
   var pages = document.getElementsByClassName("page-view");
   var buttons = document.getElementsByClassName("nav-link");
 
@@ -104,6 +111,20 @@ for (var i = 0; i < pageButtons.length; i++) {
     showPage(this.getAttribute("data-go"));
   });
 }
+
+// Select Student or Organizer view. This is a demo role switch, not secure login.
+getElement("roleSelect").addEventListener("change", function () {
+  currentRole = this.value;
+  var organizerLinks = document.getElementsByClassName("organizer-only");
+
+  for (var i = 0; i < organizerLinks.length; i++) {
+    organizerLinks[i].hidden = currentRole !== "organizer";
+  }
+
+  if (currentRole === "student" && getElement("organizer").classList.contains("active")) {
+    showPage("dashboard");
+  }
+});
 
 // Mobile menu button
 getElement("menuToggle").addEventListener("click", function () {
