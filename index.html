@@ -20,7 +20,7 @@
         <button class="nav-link" data-view="activities"><span>◷</span> Activities</button>
         <button class="nav-link" data-view="my-hours"><span>◉</span> My hours</button>
         <button class="nav-link" data-view="submit"><span>＋</span> Submit hours</button>
-        <button class="nav-link" data-view="organizer"><span>✓</span> Organizer panel</button>
+        <button class="nav-link organizer-only" data-view="organizer" hidden><span>✓</span> Organizer panel</button>
       </nav>
       <div class="sidebar-bottom">
         <div class="help-card">
@@ -42,6 +42,7 @@
         <div class="breadcrumb">CampusCare <span>/</span> <strong id="pageName">Dashboard</strong></div>
         <div class="top-actions">
           <span class="today-label" id="todayLabel"></span>
+          <label class="role-switch">View as <select id="roleSelect"><option value="student">Student</option><option value="organizer">Organizer</option></select></label>
           <div class="avatar top-avatar">ST</div>
         </div>
       </header>
