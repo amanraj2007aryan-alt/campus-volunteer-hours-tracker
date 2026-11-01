@@ -56,7 +56,8 @@ function calculateHours(status) {
 }
 
 // 3. Change between website sections
-var currentRole = getElement("roleSelect").value;
+var currentRole = localStorage.getItem("campusCareRole") || "student";
+getElement("roleSelect").value = currentRole;
 
 function showPage(pageName) {
   if (pageName === "organizer" && currentRole !== "organizer") {
@@ -139,6 +140,7 @@ function updateRoleView() {
 
 getElement("roleSelect").addEventListener("change", function () {
   currentRole = this.value;
+  localStorage.setItem("campusCareRole", currentRole);
   updateRoleView();
 });
 
