@@ -1,57 +1,48 @@
 # Campus Volunteer Hours Tracker
 
-A responsive front-end academic project for registering campus volunteering activities and recording and verifying service hours.
+## About the project
 
-## Live demo
+This website helps students find volunteer activities and keep a record of the hours they work.
 
-**Website:** https://campus-volunteer-hours-tracker.vercel.app
-
-The project has one shared public deployment. Only the group member managing the deployment needs to configure Vercel; other group members can use the same website URL and do not need separate Vercel deployments.
-
-## Features
-
-- Dashboard showing total, verified and pending volunteer hours
-- Browse, search and filter volunteer activities
-- Register for activities
-- Submit volunteer hours
-- Simulated organizer review with approve/reject actions
-- View volunteer history and verification status
-- Responsive layout for desktop and mobile screens
-
-## Tech stack
-
-- **HTML5:** semantic page structure, forms, labels, inputs and tables
-- **CSS3:** responsive layouts, Flexbox, Grid, variables, transitions and media queries
-- **JavaScript:** variables, functions, conditionals, arrays, objects, event handling and DOM updates
-- **Browser `localStorage`:** demo persistence in the same browser/device
-
-No frameworks or build step are required.
-
-## Run locally
-
-1. Clone or download this repository.
-2. Open `index.html` in a browser, or open the folder in VS Code and use Live Server.
-
-## Deployment with Vercel
-
-This repository is deployed at:
+## Live website
 
 https://campus-volunteer-hours-tracker.vercel.app
 
-Only one Vercel project/deployment is needed for the whole group. Share the live URL with teammates, evaluators and other users.
+## What can we do on this website?
 
-To update the live website:
-1. Make the required changes in the project files.
-2. Commit and push the changes to the connected GitHub repository's `main` branch.
-3. Vercel can automatically build and deploy the updated version.
+1. See available volunteer activities.
+2. Register for an activity.
+3. Submit the number of hours completed.
+4. Check whether the hours are approved or pending.
+5. View volunteer history.
+6. Use the organizer demo to approve or reject submitted hours.
 
-For a fresh deployment, import this GitHub repository in Vercel, select **Other** as the framework preset if prompted, and leave the build command and output directory empty/default because this is a static site with `index.html` at the repository root.
+## Technologies used
 
-## Important project limitation
+- **HTML** – creates the pages, forms, buttons and tables.
+- **CSS** – adds colours, spacing, layout and mobile-friendly design.
+- **JavaScript** – makes buttons and forms work and updates the page.
+- **localStorage** – saves demo data in the same browser.
 
-This is a front-end classroom prototype, not a production multi-user system. `localStorage` data is stored only in the current browser profile and is not shared between students or organizers. For example, registering on one device will not automatically appear on another device. The organizer panel is a simulated demonstration; there is no real authentication, role-based authorization, server-side validation, shared database or secure audit trail. Do not enter real personal or sensitive information.
+We have used basic HTML, CSS and JavaScript. No framework or database is used.
 
-## Group
+## How to run the project
+
+1. Download or clone this GitHub repository.
+2. Open the folder.
+3. Open `index.html` in a web browser.
+
+## Hosting
+
+The project is hosted on **Vercel**. Only one group member needs to manage the Vercel deployment. The other members can use the same live website link.
+
+When we update the code and push it to GitHub, Vercel can automatically update the live website.
+
+## Important note
+
+This is a college demonstration project. The data is saved in the browser using `localStorage`. This means data is not shared between different devices or users. The organizer panel is only a demonstration and does not have real login or database features.
+
+## Group members
 
 - RK4P26XPA22
 - RK4P26XPA23
